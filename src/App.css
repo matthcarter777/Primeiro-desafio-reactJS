@@ -1,0 +1,44 @@
+body {
+    background-color: #f1f1f1;
+    color: rgb(10, 20, 31);
+}
+
+header {
+    overflow: hidden;
+    padding: 20px 10px;
+    background-color: rgb(118, 34, 179);
+    text-align: center;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px; 
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+body h1 {
+    text-align: center; 
+}
+
+body button {
+    background-color:rgb(118, 34, 179);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+body button:hover {
+    background-color:rgb(79, 15, 124);
+    transition-delay: 100ms;
+}
