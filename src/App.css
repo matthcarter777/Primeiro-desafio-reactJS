@@ -20,7 +20,18 @@ header {
 #content {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    margin: 50px;  
+}
+
+input {
+    margin-right: 10px;
+}
+
+#values {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 body h1 {

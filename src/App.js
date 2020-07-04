@@ -16,10 +16,17 @@ export default function App(){
     }, []);
 
     async function handleCar(){
+        let txtMarca = document.getElementById('marca')
+        let txtModelo = document.getElementById('modelo')
+        let txtAno = document.getElementById('ano')
+
+        console.log(txtMarca.value,txtModelo.value,txtAno.value)
+
+
         const response = await api.post('/carros', {
-            marca: "Critoen",
-	        modelo: `C3 ${Date.now()}`,
-	        ano: '2008'
+            marca: txtMarca.value,
+	        modelo: txtModelo.value,
+	        ano: txtAno.value
         });
 
         const car = response.data;
@@ -34,6 +41,11 @@ export default function App(){
                 <ul>
                     { cars.map( car => <li key={car.id}>{car.modelo} | {car.marca} | {car.ano}</li>)}
                 </ul>
+            </div>
+            <div id="values">
+                <input type="text" id="modelo" placeholder="Modelo"></input>
+                <input type="text" id="marca" placeholder="Marca"></input>
+                <input type="text" id="ano" placeholder="Ano"></input>
             </div>
             <div id="content">
                 <button type="button" onClick={handleCar}>Adicionar Projeto</button> 
